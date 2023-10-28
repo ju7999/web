@@ -55,7 +55,42 @@
     #h1 {color:green;} -아이디
 
 
+    아이디와 클래스 이름정의
+    1. 첫글자는 영문자 , _ ,-
+    2. 두번째 문자부터 영문자, _,-, 숫자
+    3. 영문의 대소문자는 구별
+    4. 관례상 의미있는 내용으로 정의
+
+    아이디와 클래스 차이
+    1. 클래스는 한 페이지 내에서 중복 사용할 수 있으나
+       아이디는 같은 이름을 중복 사용할수없다
+    2. html 클래스 속성 값은 하나 이상 지정할수 있으나 아이디는 지정할수없다
+
+    css 속성: 값;
+     color: red:
+     background-color: red;
+     font-weight: bole;
+     font-style: italic;
+     text-decoration: underline;
+     text-decoration: line-through;
+     font-size: 24px;
+     text-indent: 40px;
+     margin-left: 40px;
+
+
+
+  블록레벨요소
+  h1~h6, p , hr, blockquote
+  u1,o1, li  (ul은 메뉴 로 많이씀)
+  dl,dt,dd
+
+  인라인요소
+  b, strong, i, em, small, mark, sub, sup, del, ins, br, q
+  
+
 
 
 
 html-8/9은 중요!!
+
+
