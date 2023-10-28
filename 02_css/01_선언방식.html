@@ -1,4 +1,22 @@
 <!-- https://codepen.io/fsweb29/pen/OJrGjbL?editors=1000 -->
+
+<!-- 
+html 형식:  
+      <태그 속성="값">내용</태그>
+      <태그 속성="값" 속성="값" >내용</태그>
+      <태그>내용</태그>
+
+      html은 내용기술
+      css는 디자인 (예, 글자색,배경색 등)
+
+
+css 형식
+      선택자 {속성: 값; 속성: 값;  ....갯수제한없음} ;구분
+
+     
+      css를 어디에 기록하는가?
+
+ -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,9 +24,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
+    
+    
+    
     <!-- External Style -->
+    <!--  <link rel="stylesheet" href="css파일"> -->
+  <link rel="stylesheet" href="style.css">
+   
+   
+   
+   
+    <!-- Internal Style 인터널 스타일 -->
+    <style>
+        /* css 기록 */
+        /* 스타일 사이에 쓰면 된다 */
+        /* 선택자 {속성: 값; 속성: 값;  ....갯수제한없음} ;구분 */
 
-    <!-- Internal Style -->
+        /* 
+        선택자 {속성: 값;
+            속성: 값; 
+            속성: 값; 
+            속성: 값; 
+            속성: 값; 
+            
+            
+            */
+       
+       /* 
+       color  red
+       font-weight   bold
+       font-style  italic
+       background-color  yellow
+       text-decoration  underline
+       */
+       
+       /* 같은속성의 다른값을 지정하면 나중것이 적용된다 */
+            p{
+                color:red;
+                background-color:rgb(255, 241, 46);
+                text-decoration: underline;
+            }   
+
+    </style>
     
 </head>
 <body>
@@ -16,9 +73,16 @@
     <!-- inline Style -->
     <p>인라인 CSS이란 HTML의 스타일 속성의 값으로 CSS의 속성과 값을 기록한다.</p>
     <ul>
-        <li>inline Style</li>
-        <li>Internal Style</li>
-        <li>External Style</li>
+       
+     <!-- li태그안에 안에있는 inline(인라인) Style색을 빨강으로 지정하라   -->
+     <!-- 
+        color        글자색
+        font-weight  굵기  bold;
+        font-style   기울기  italic;
+      -->
+        <li style="color:red;">inline(인라인) Style /추천하는방식이 아님</li>  
+        <li style="font-weight:bold;">Internal(내부) Style</li>
+        <li style="font-style:italic;">External(외부) Style /일반적인 css 사용</li>
     </ul>
 </body>
 </html>
