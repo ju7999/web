@@ -8,7 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML</title>
     <style>
+        /* 선택자 {속성: 값;} */
+        /* css는 단위를 써야한다  */
         body * {border: 1px solid lime;}
+        .coca {width: 50px;}
     </style>
 </head>
 <body>
@@ -17,20 +20,44 @@
     <h2>상대 경로</h2>
     <!-- 파일은 파일명.확장자 -->
     <!-- 이미지: png가 제일많이 사용 jpg, png, gif, svg-->
-    <!-- alt="코카콜라" 이미지에대한 설명글 _꼭 써줘야한다 -->
+    <!-- alt="코카콜라" 이미지에대한 설명글 _꼭 써줘야한다, 간단한 설명글  -->
+    <!-- 웹접근성 alt, 스크린리더라는프로그램이 alt설명글을 읽어준다 -->
+    <!-- 1.현재문서(html)와 이미지파일이 같은 폴더에 있을때 -->
+    <!--    파일명만 기록한다 -->
+     
+     <img src="favicon.png" alt="구글 아이콘">
+     <img src="./favicon.png" alt="구글 아이콘">
 
    
-    <img src="favicon.png" alt="파비콘">
-    <img src="site/house5.jpg" alt="집">
-    <img src="../assets/coca.png" alt="콜라">
+ 
+    <!-- 2. 현재 문서 보다 하위 폴더에 이미지파일이 있을 경우 -->
+    <!--    하위폴더/파일명  -->
+    <!--    ./하위폴더/파일명  ./를하면 목록이 뜬다 -->
+    <img src="images/workplace.jpg" alt="작업공간">
+    <img src="./images/workplace.jpg" alt="작업공간">
 
-    <hr>
+   
+    <!-- 3. 현재 문서 보다 상위 폴더에 이미지파일이 있을 경우 -->
+            <!-- ../파일명  상위폴더로 -->
+            <!-- .은 현재폴더(디렉토리), ..은 부모폴더 -->
+            <!-- html 속성의 순서는 없다 -->
+            <!-- 선택속성: width(가로크기), height(세로크기) -->
+            <!-- html의 width, height 보다는 css의 width, height로 사용한다  -->
+            <img src="./../assets/coca.png" alt="코카콜라" width="200" >
+            <img src="../assets/coca.png" alt="코카콜라" class="coca">
+  
 
-    <img src="/01_html/favicon.png" alt="파비콘">
-    <img src="/01_html/site/house5.jpg" alt="집">
-    <img src="/assets/coca.png" alt="콜라">
+            <img src="/01_html/favicon.png" alt="구글파비콘">
+            <img src="/01_html/images/workplace.jpg" alt="작업공간">
+            <img src="/assets/coca.png" alt="코카콜라">
+
 
     <h2>절대 경로</h2>
-    <img src="http://frontendw.dothome.co.kr/assets/coca.png" alt="코카콜라">
+    <!-- 절대경로는 html문서 위치가 바뀌어도 그대로 표시 -->
+  
+    <img src="https://ju7999.github.io/web/assets/coca.png" alt="코카콜라" class="coca">
+    <img src="https://pds.joongang.co.kr/news/component/htmlphoto_mmdata/201901/20/28017477-0365-4a43-b546-008b603da621.jpg" alt="강아지" class="coca">
+
+
 </body>
 </html>
