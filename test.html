@@ -1,41 +1,32 @@
+
+<!-- 11월6일 월요일 복습 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>연습시간</title>
-    <style>
-       p {color:red;}
-       .color {background-color: blue;}
-       .indent {text-indent:2cm;}
-       #pp {font-size: 40px;}
-       
-       span {color:blue;}
-
-
-    </style>
+    <title>img연습시간</title>
 </head>
 <body>
-    <h1>웹디자인 열심히 해보자</h1>
-    <p id="pp">오늘은 금요일 _오늘만 하면 쉬는날이지만..내일 학원을 가지
-        학원은 출근할때보다 더빨리 일어나야하지 ㅠ
-        열심히 해보자 노력은 배신안한다 ㅋ
+    <h1>img복습시간</h1>
+    <h2>상대경로</h2>
+      <img src="favicon1.png" alt="구글파비콘">
+      <img src="./favicon1.png" alt="구글파비콘">
 
-    </p>
-    <p class="color indent">오늘은 금요일 _오늘만 하면 쉬는날이지만..내일 학원을 가지
-        학원은 출근할때보다 더빨리 일어나야하지 ㅠ
-        열심히 해보자 노력은 배신안한다 ㅋ
+      <hr>
+      <br>
 
-    </p>
-    <ul>웹디자인공부</ul>
-    <li>html<span>공부</span></li>
-    <h1>공부를 잘하는법</h1>
-      <p>계속 예습복습하기</p>
+      <!-- 파일이 현재 작업페이지보다 하위폴더에 위치했을경우 -->
+      <img src="01_html/images/workplace.jpg" alt="작업">
+      <img src="./01_html/images/workplace.jpg" alt="작업">
+
+
       
-    <li>css공부</li>
-    <li><span>단축키</span>외우기</li>
+    <h2>절대경로</h2>
+    <!-- 절대경로는 html의 위치가 바뀌어도 그대로 사용가능합니다 -->
+    
 
-    <ol>순서정하기</ol>
-
+      
+    
 </body>
 </html>
