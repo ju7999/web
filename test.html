@@ -1,32 +1,121 @@
-
 <!-- 11월6일 월요일 복습 -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>img연습시간</title>
+    <style>
+        .coca {
+            width: 300px;
+        }
+
+        .style {
+            background-color: black;
+        }
+
+        .color {
+            color: yellow;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+
 </head>
+
 <body>
-    <h1>img복습시간</h1>
-    <h2>상대경로</h2>
-      <img src="favicon1.png" alt="구글파비콘">
-      <img src="./favicon1.png" alt="구글파비콘">
+    <ul>
 
-      <hr>
-      <br>
+        <li><a href="#ab">상대링크</a></li>
+        <li><a href="#cd">절대링크</a></li>
+        <li><a href="#ef">비디오</a></li>
+        <li><a href="#ge">비디오_컨트롤러</a></li>
+        <li><a href="#hi">오디오_컨트롤러</a></li>
+        <li><a href="#jk">배경음악설정</a></li>
 
-      <!-- 파일이 현재 작업페이지보다 하위폴더에 위치했을경우 -->
-      <img src="01_html/images/workplace.jpg" alt="작업">
-      <img src="./01_html/images/workplace.jpg" alt="작업">
+    </ul>
 
 
-      
-    <h2>절대경로</h2>
+    <h1>img복습시간/a링크복습</h1>
+    <h2 id="ab">상대링크</h2>
+    <img src="favicon1.png" alt="구글파비콘">
+    <img src="./favicon1.png" alt="구글파비콘">
+    <p>로렘 입숨은 출판이나 그래픽 디자인 분야에서 폰트, 타이포그래피, 레이아웃 같은 그래픽 요소나 시각적 연출을 보여줄 때 사용하는 표준 채우기 텍스트로, 최종 결과물에 들어가는 실제적인 문장 내용이
+        채워지기 전에 시각 디자인 프로젝트 모형의 채움 글로도 이용된다.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo veritatis amet nemo unde mollitia culpa, sunt
+        sequi. Rerum optio ipsa molestias veritatis expedita laudantium minus tempora veniam aliquid, incidunt et sed?
+        Reiciendis deserunt ipsum tenetur officia modi quas ut, aliquam nemo! Obcaecati, saepe assumenda necessitatibus
+        esse ducimus, eos voluptatibus recusandae fuga voluptatum est quidem totam, eligendi facere et. Iusto tenetur
+        accusantium temporibus hic! Sunt blanditiis tenetur illo magni, ex iure facere suscipit aperiam, consequuntur
+        eius repudiandae deserunt veritatis porro dolorum, dignissimos odit asperiores quam in similique nesciunt id
+        laboriosam voluptas. Ducimus fugiat, ad sint eaque quos veniam. Omnis, quas porro?</p>
+
+
+
+    <!-- 파일이 현재 작업페이지보다 하위폴더에 위치했을경우 -->
+    <img src="01_html/images/workplace.jpg" alt="작업">
+    <img src="./01_html/images/workplace.jpg" alt="작업">
+
+
+
+    <h2 id="cd">절대링크</h2>
     <!-- 절대경로는 html의 위치가 바뀌어도 그대로 사용가능합니다 -->
-    
+    <img src="http://ju7999.github.io/web/assets/coca.png" alt="코카콜라" class="coca">
+    <img src="http://ju7999.github.io/web/assets/coca.png" alt="코카콜라" class="style">
 
-      
-    
+    <br><br>
+    <hr><br><br><br>
+
+    <h2 id="ef">비디오</h2>
+    <video autoplay muted loop>
+
+        <source src="/assets/video/mov_bbb.mp4" type="video/mp4">
+        <source src="/assets/video/mov_bbb.ogv" type="video/ogv">
+        <source src="/assets/video/mov_bbb.webm" type="video/webm">
+
+    </video>
+
+    <hr>
+    <h2 id="ge">비디오_컨트롤러 있는타입</h2>
+    <video controls src="/assets/video/mov_bbb.mp4">컨틀롤러 있는 동영상</video>
+
+    <hr>
+    <h2 id="hi">오디오_컨트롤러</h2>
+    <audio controls>
+        <source src="/assets/audio/Good_Morning!_Reed_Mathis.mp3" type="audio/mp3">
+        <source src="/assets/audio/horse.wav" type="audio/wav">
+        <source src="/assets/audio/horse.ogv" type="audio/ogv">
+
+    </audio>
+
+    <hr>
+    <br>
+
+    <h2 id="jk">배경음악으로설정</h2>
+    <audio autoplay src="/assets/audio/Good_Morning!_Reed_Mathis.mp3"></audio>
+
+
+    <br><br><br>
+    <hr>
+    <a href="http://naver.com">네이버</a>
+    <a href="http://naver.com" target="_blank" class="style color">네이버</a>
+    <a href="https://mail.naver.com/write/popup?srvid=note&to=j0184202816@naver.com" target="_blank">메일바로가기</a>
+    <a href="tel:010-6289-3816" class="style color">통화하기</a>
+
+
+
+
+
+    <br><br>
+    <hr><br><br><br>
+
+    &nbsp; &nbsp; &nbsp; &nbsp; <a href="#top">맨위로가기</a>
+
+
+
 </body>
+
 </html>
