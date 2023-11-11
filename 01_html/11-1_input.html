@@ -2,14 +2,90 @@
 <!-- input -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML</title>
 </head>
+
 <body>
     <h1>폼</h1>
+    <!--  input :입력 상자
+           label : 입력상자에 대한 이름표 (레이블)
+           -제일많이사용
+         -->
+    <!-- 태그뒤에 주석달기 shift+alt+a -->
+    <!-- placeholder 클릭하면 지워지는 글씨 -->
+    <!-- required: 필수 입력 속성 -->
+    아이디:<input type="text" name="user_id" required placeholder="아이디를쓰세요"><br>
+    비밀번호:<input type="password" name="user_pw" required><br><br>
+    <input type="hidden" name="hide"><!-- 개발자가 필요시사용할 목적 -->
+    <!-- name 이름의 의미  input의구분/ 데이터베이스 전송시필요! -->
+    <input type="search">검색<br><br>
+    전화번호<input type="tel" name="user_tel"><br>
+    이메일<input type="email" name="user_email"><br>
+    웹주소<input type="url" name="user_url">
+    <hr>
+
+    <!-- value=버튼이름으로 버튼은 name필요없다-->
+    <input type="submit" value="전송"><br>
+    <input type="reset" value="초기화"><br>
+    <input type="button"value="버튼"><br> <!-- 전송/초기화외에 사용 -->
+    <input type="image" src="../assets/img_submit.gif" alt="더보기버튼"><br>
+    <input type="file" name="myfile"><br> <!-- 업로드버튼 이것만 name필요 -->
+    
+
+    <button type="submit">회원가입</button>
+    <button type="reset">초기화</button>
+    <button type="button">버튼</button>
+    <hr>
+
+    <!-- 선택하고싶은만큼 .이름은 원하는대로 -->
+    <!-- value= DB에전송될값컴퓨터가 읽는거_체크한것만.checked-미리선택해놓는옵션 -->
+    <input type="checkbox" name="chkgroup" value="html" checked> html
+    <input type="checkbox" name="chkgroup"> css
+    <input type="checkbox" name="chkgroup"> javascript
+    <input type="checkbox" name="chkgroup"> jQuery
+    <hr>
+
+    <!-- 여러개 중에 1개 선택 .이름은 원하는대로 name로 그룹을해서 선택한개만 하게 됨-->
+    <!-- checked-미리 옵션체크해놓음 -->
+    <input type="radio" name="radiogroup" value="yes" checked>예
+    <input type="radio" name="radiogroup" value="no">아니오
+
+    <hr>
+    <!-- 스핀박스:0이기본값 정수,1증가 또는 1감소 (기본값)-->
+    <!-- 2~10까지만 옵션표할때   -->
+    <!-- type="number" 필수적는거  name="quantity-수량이넘어가는필수 -->
+    <!-- value=초기값 -->
+    <input type="number" name="quantity" min="2" max="10" step="2" value="2">
+    <input type="number"> <!-- 기본틀 -->
+
+
+    <!-- 슬라이드 막대 기본값 0~100%  name="vote"으로 값을 전송 -->
+    <!-- 1~10  value=초기값 -->
+    <input type="range" name="vote" min="1" max="10" value="7">
+    <input type="range" name="vote" min="0" max="100"> <!-- 기본 -->
+
+    <hr>
+    <!-- 16진수: #ff0000  기본은 검정색 -->
+    <input type="color" name="favcolor" value="#ff0000">
+    <hr>
+
+    <!-- 연도_월_일   2023_11_11 한페이지에 name를 같이쓰면안된다-->
+    <input type="date" name="birth">
+    <!-- 연도_월_일 오후 시간:분  2023_11_11 오후 02:22 -->
+    <input type="datetime-local" name="birthday">
+    <!-- 연도_월   202_11 -->
+    <input type="month" name="birth_month">
+    <!-- 연도, 번째주    2023,45번째 주 -->
+    <input type="week" name="birth_week">
+    <!-- 오후 시:분    오후 02:24 -->
+    <input type="time" name="birth_time">
+
 
 </body>
+
 </html>

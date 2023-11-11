@@ -1,0 +1,42 @@
+
+홈페이지에있는 이미지 다운받는 프로그램 [플러그인]
+-상업적사용 주의/ 저작권 주의하기-
+
+크롬에서 주소창 검색
+
+크롬웹스토어
+https://chrome.google.com/webstore/category/extensions?hl=ko
+
+fatkun검색
+Fatkun Batch Download Image
+
+image downloader검색
+Image Downloader
+
+
+판매사이트  https://www.oround.com/
+
+이미지 무료다운로드 사이트
+jpg파일: unsplash   https://unsplash.com/ko
+png파일: pagwing --> 배경이 투명한 이미지    https://www.pngwing.com/ko 
+
+
+
+외부 css
+
+figcation 조금더 신경써서 보기
+이미지맵
+ <!-- 좌표 찾기: https://www.image-map.net/ -->
+
+ usemap
+
+
+ 이미지파일변환
+ https://convertio.co/kr/image-converter/
+
+
+ 개인메모장 -노션
+ https://www.notion.so/ko-kr/product?utm_source=google&utm_campaign=10805039169&utm_medium=104440699817&utm_content=455555244419&utm_term=%EB%85%B8%EC%85%98&targetid=aud-1053779029641:kwd-827502875973&gad_source=1&gclid=EAIaIQobChMIuub-w5O7ggMV0yN7Bx0-vgucEAAYASAAEgIOnPD_BwE
+
+ 피그마
+
