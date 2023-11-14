@@ -1,0 +1,8 @@
+/* 첫줄에 꼭 번역하는거 */
+@charset "utf-8";
+
+iframe {
+    width: 1500px;
+    height: 845px;
+    border: none;
+}

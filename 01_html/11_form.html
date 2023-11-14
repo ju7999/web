@@ -1,5 +1,5 @@
 <!-- https://codepen.io/fsweb29/pen/yLGrbdr?editors=1000 -->
-<!-- form, fieldset, legend, input, label, textarea, select, opation, optgroup, datalist -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,14 +12,86 @@
 
 <body>
     <h1>폼</h1>
-    <p>폼(양식)? 검색 창, 로그인 창, 회원가입, 게시판</p>
-    <p>form, fieldset, legend, input, label, textarea, select, opation, optgroup, datalist</p>
+    <!-- 검색 영역: https://www.naver.com/ -->
+    <!-- 로그인창: https://nid.naver.com/nidlogin.login?mode=form&url=https://www.naver.com/ -->
+    <!-- 회원가입:  https://nid.naver.com/user2/join/agree?lang=ko_KR&domain=www.naver.com -->
+    <!-- 게시판: https://www.mega-mgccoffee.com/bbs/?bbs_category=1 -->
+    <!-- <p>폼(양식)? 검색 창, 로그인 창, 회원가입, 게시판</p>
+    <p>form, fieldset, legend, input, label, textarea, select, opation, optgroup, datalist</p> -->
 
-    <h2>검색</h2>
 
-    <h2>로그인</h2>
+    <!-- 
+        <form>: 폼 요소를 그룹핑 !!필수사항
+        <fieldset> : 그룹핑  선택사항!! css할때 사용
+            legend> :그룹의 이름  선택사항!!
+        <input> :다양한 입력상자 -한줄 텍스트
+        <button>:버튼
+        <label> :레이블 이름처리 !!필수사항
+        <textarea> : 여러줄 텍스트
+        <select> :목록
+           <opation> :목록의 내용
+           <optgroup> :목록의 내용을 그룹핑
+        <datalist> :목록
+           <opation>
+           <optgroup>
+     -->
 
-    <h2>회원가입</h2>
+
+
+  <h2>로그인 페이지</h2>
+    <form action="login.jsp">
+        <!-- for 속성값과 id속성 값이 일치해야 된다 -->
+        <label for="user_id">아이디:</label>
+        <input type="text" id="user_id" name="user_id" required placeholder="아이디를쓰세요">
+        <label for="user_pw">비밀번호:</label>
+        <input type="password" id="user_pw" name="user_pw" required>
+    </form>
+
+
+  <h2>검색창</h2>>
+    <input type="search">검색<br><br>
+    전화번호<input type="tel" name="user_tel"><br>
+    이메일<input type="email" name="user_email"><br>
+    웹주소<input type="url" name="user_url">
+    <hr>
+
+    <!-- value=버튼이름으로 버튼은 name필요없다-->
+    <input type="submit" value="전송"><br>
+    <input type="reset" value="초기화"><br>
+    <input type="button" value="버튼"><br> <!-- 전송/초기화외에 사용 -->
+    <input type="image" src="../assets/img_submit.gif" alt="더보기버튼"><br>
+    <input type="file" name="myfile"><br> <!-- 업로드버튼 이것만 name필요 -->
+
+
+    <button type="submit">회원가입</button>
+    <button type="reset">초기화</button>
+    <button type="button">버튼</button>
+    <hr>
+ <h2>회원가입</h2>
+    <form action="member.jsp">
+        <textarea name="rule" id="" cols="30" rows="10">
+            dkjddjkddkdj
+        </textarea>
+       
+        <!-- 선택하고싶은만큼 .이름은 원하는대로 -->
+        <!-- value= DB에전송될값컴퓨터가 읽는거_체크한것만.checked-미리선택해놓는옵션 -->
+        <fieldset>
+            <legend>당신이 원하는 과목을 선택해주세요</legend>
+            <label ><input type="checkbox" name="chkgroup" value="html" checked> html</label>
+            <label ><input type="checkbox" name="chkgroup"> css</label>
+            <label ><input type="checkbox" name="chkgroup"> javascript</label>
+            <label ><input type="checkbox" name="chkgroup"> jQuery</label>
+        </fieldset>
+        
+        <!-- 여러개 중에 1개 선택 .이름은 원하는대로 name로 그룹을해서 선택한개만 하게 됨-->
+        <!-- checked-미리 옵션체크해놓음 -->
+        
+        <fieldset>
+           
+            <label ><input type="radio" name="radiogroup" value="yes" checked>예</label>
+            <label ><input type="radio" name="radiogroup" value="no">아니오</label>
+        </fieldset>
+    </form>
 </body>
 
 </html>
