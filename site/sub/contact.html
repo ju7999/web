@@ -18,6 +18,9 @@
     <title>BR Architects</title>
     <!-- 외부 css link 로 -->
     <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        input {width:100%; }
+    </style>
 </head>
 
 <body>
@@ -40,6 +43,14 @@
     <h2>Contact</h2>
     <p>Lets get in touch and talk about your next project.</p>
     <!-- 폼(양식) -->
+    <!-- java(백핸드개발자), javascript(퍼블리셔,프론트앤드개발자) -->
+    <form action="contact.jsp">
+        <input type="text" name="u_name" placeholder="이름을 입력해주세요">
+        <input type="email" name="u_email" placeholder="메일을 입력해주세요">
+        <input type="text" name="u_subject" placeholder="제목을 입력해주세요">
+        <input type="text" name="u_comment" placeholder="내용을 입력해주세요">
+        <button type="submit">SEND MESSAGE</button>
+    </form>
 
     <!-- 구글 맵 API -->
     <!-- 구글맵 검색   -->

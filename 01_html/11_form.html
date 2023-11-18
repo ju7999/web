@@ -8,6 +8,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML</title>
+    <style>
+        /* 선택자 {속성:값;} */
+        textarea {
+            width: 400px;
+            height: 100px;
+        }
+    </style>
 </head>
 
 <body>
@@ -38,61 +45,99 @@
 
 
 
-  <h2>로그인 페이지</h2>
+    <h2>로그인 페이지</h2>
     <form action="login.jsp">
         <!-- for 속성값과 id속성 값이 일치해야 된다 -->
         <label for="user_id">아이디:</label>
-        <input type="text" id="user_id" name="user_id" required placeholder="아이디를쓰세요">
+        <input type="text" id="user_id" name="user_id" required placeholder="아이디를쓰세요"><br>
         <label for="user_pw">비밀번호:</label>
-        <input type="password" id="user_pw" name="user_pw" required>
+        <input type="password" id="user_pw" name="user_pw" required><br>
+        <input type="submit" value="로그인">
     </form>
 
 
-  <h2>검색창</h2>
-    <input type="search">검색<br><br>
-    전화번호<input type="tel" name="user_tel"><br>
-    이메일<input type="email" name="user_email"><br>
-    웹주소<input type="url" name="user_url">
-    <hr>
+    <h2>검색창</h2>
+    <input type="search"> <input type="submit" value="검색"><br><br>
+
+
 
     <!-- value=버튼이름으로 버튼은 name필요없다-->
-    <input type="submit" value="전송"><br>
-    <input type="reset" value="초기화"><br>
-    <input type="button" value="버튼"><br> <!-- 전송/초기화외에 사용 -->
-    <input type="image" src="../assets/img_submit.gif" alt="더보기버튼"><br>
-    <input type="file" name="myfile"><br> <!-- 업로드버튼 이것만 name필요 -->
 
 
-    <button type="submit">회원가입</button>
-    <button type="reset">초기화</button>
-    <button type="button">버튼</button>
-    <hr>
- <h2>회원가입</h2>
+    <h2>회원가입페이지</h2>
     <form action="member.jsp">
-        <textarea name="rule" id="" cols="30" rows="10">
-            dkjddjkddkdj
-        </textarea>
-       
+        <!-- textarea 글씨 /줄바꿈도 가능/긴정보쓸대 사용 -->
+        <!-- 글씨 블록잡고   tab 들여쓰기  shift+tab 들여쓰기 -->
+        <!-- cols --한글은 1칸에 2정도  ex)50이면  숫자 50칸 으로된다 -->
+        <!-- readonly--읽기전용으로_이거 안쓰면 지워진다 /방명록에는 쓰면안된다 -->
+        <textarea name="rule" readonly>
+여러분을 환영합니다.
+네이버 서비스 및 제품(이하 ‘서비스’)을 이용해 주셔서 감사합니다. 본 약관은 다양한 네이버 서비스의 이용과 관련하여 네이버 서비스를 제공하는 네이버 주식회사(이하 ‘네이버’)와 이를 이용하는 네이버 서비스 회원(이하 ‘회원’) 또는 비회원과의 관계를 설명하며, 아울러 여러분의 네이버 서비스 이용에 도움이 될 수 있는 유익한 정보를 포함하고 있습니다.
+
+네이버 서비스를 이용하시거나 네이버 서비스 회원으로 가입하실 경우 여러분은 본 약관 및 관련 운영 정책을 확인하거나 동의하게 되므로, 잠시 시간을 내시어 주의 깊게 살펴봐 주시기 바랍니다.
+        </textarea><br>
+        <!-- for의 속성의 값과 id속성 값이 같아야 한다 -->
+        <!-- lavel 태그으 for 속성값과 id속성값은 같아야 한다 그래야 클릭시 커서 -->
+
+        <label for="user_tel">전화번호</label>
+        <input type="tel" name="user_tel" id="user_tel"><br>
+        <label for="user_email">이메일</label>
+        <input type="email" name="user_email" id="user_email"><br>
+
+
+        <select name="com" id="com">
+            <!-- optgrout 는 내용이 많을때 그룹지을때사용한다 -->
+            <!-- selected 기본으로 맨처음 보여주게해주는거 -->
+
+            <optgroup label="SKT">
+                <option value="skt1">SKT1</option>
+                <option value="skt2">SKT2</option>
+            </optgroup>
+            <optgroup label="KT">
+                <option value="kt1">KT1</option>
+                <option value="kt2">KT2</option>
+            </optgroup>
+            <optgroup label="LG U+" >
+                <option value="lg u+1" selected>LG U+1</option>
+                <option value="lg u+2">LG U+2</option>
+            </optgroup>
+        </select><br>
+        <!-- datalist 버전5에서 새로 나온기능이라 자동완성이 안된다 -->
+        <!-- datalist(select)와 다똑같다 다른점 input박스를 써줘야 표시가 된다  -->
+        <!-- input → list써주고 datalist id와 연결/ id속성값은 같아야 한다 -->
+        <!-- select-목록에서만 사용가능 -->
+        <!-- datalist -- 목록외에 원하는걸 적을수도있다 입력박스+목록박스/콤보박스 -->
+        <!-- 이메일은 마지막에 @ -->
+        <label for="user_in2">본인 확인 이메일</label>
+        <input type="text" name="user_in2" id="user_in2">@
+        <input type="text" list="mail" name="user_domain" placeholder="직접입력"> 
+        <datalist id="mail">
+            <option value="naver.com">naver.com</option>
+            <option value="google.com">google.com</option>
+            <option value="daum.net">daum.net</option>
+        </datalist>
+
         <!-- 선택하고싶은만큼 .이름은 원하는대로 -->
         <!-- value= DB에전송될값컴퓨터가 읽는거_체크한것만.checked-미리선택해놓는옵션 -->
         <fieldset>
             <legend>당신이 원하는 과목을 선택해주세요</legend>
-            <label ><input type="checkbox" name="chkgroup" value="html" checked> html</label>
-            <label ><input type="checkbox" name="chkgroup"> css</label>
-            <label ><input type="checkbox" name="chkgroup"> javascript</label>
-            <label ><input type="checkbox" name="chkgroup"> jQuery</label>
+            <label><input type="checkbox" name="chkgroup" value="html" checked> html</label>
+            <label><input type="checkbox" name="chkgroup"> css</label>
+            <label><input type="checkbox" name="chkgroup"> javascript</label>
+            <label><input type="checkbox" name="chkgroup"> jQuery</label>
         </fieldset>
-        
+
         <!-- 여러개 중에 1개 선택 .이름은 원하는대로 name로 그룹을해서 선택한개만 하게 됨-->
         <!-- checked-미리 옵션체크해놓음 -->
-        
-      
-    <fieldset>
-            <label ><input type="radio" name="radiogroup" value="yes" checked>예</label>
-            <label ><input type="radio" name="radiogroup" value="no">아니오</label>
+
+
+        <fieldset>
+            <label><input type="radio" name="radiogroup" value="yes" checked>예</label>
+            <label><input type="radio" name="radiogroup" value="no">아니오</label><br>
+            <button type="submit">인증요청</button>
         </fieldset>
     </form>
-    
+
 </body>
 
 

@@ -8,16 +8,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML</title>
     <style>
+        /*border 굵기/ 종류/ 색상 */
+       /*  body {border: 1px solid blue;}
         div {border: 1px solid red;}
-        span {border: 1px solid red;}
+        span {border: 1px solid red;} */
+        /* 그룹선택자 (,) */
+        body, div, span {border: 5px solid red;}
+
+        /* 범용(전체, *) 선택자 */
+        * {border:1px solid blue;}
+
+
+        img {height:100px;}
     </style>
 </head>
 <body>
     <h1>블록과 인라인</h1>
 
     <h2>블록 레벨 요소</h2>
+       <!-- 
+        블록레벨요소
+        1. 줄바꿈(위에서 아래로 세로 배치)
+        2. 너비(가로 크기)는 부모 크기(기준)의 100% 
+        3. 높이(세로 크기)는 콘텐츠 크기
+        4. h1~h6, p, hr, ul, ol, li, dl, dt, dd, div, header, footer, section, article, aside, nav, main, ...-->
     
-    <h2>인라인 요소</h2>
+    
+        <!-- 
+        div : 블록레벨요소를 그룹핑
+             (과거에는 밑에 기능없이 모든 그룹핑은 div로 사용했다)
+             (↓ 밑에 있는걸 그룹핑 할때 div를 사용한다)
+        ↓ 시멘틱(의미있는)태그 html 5 에서 새로나온 (div와같은기능 그룹핑기능)
+        header :머릿말 그룹핑
+        footer :꼬릿말 그룹핑
+        section :섹션(일반적 내용)을 그룹핑
+        article :독립된 내용 그룹핑
+        aside :추가내용 그룹핑 (중요성이 떨어지는 부수적인 내용)
+        nav :내비게이션(링크가 걸리는건 전부) 그룹핑
+        main :메인 내용 그룹핑
+     -->
+     <h3>블록레벨요소들</h3>
+     <p>나는 단락입니다.paragraph/  lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias cumque minus suscipit rem maiores illo odio reprehenderit consequatur id qui, est ducimus nobis adipisci! Corporis voluptate voluptates cumque, praesentium at sed inventore maiores maxime! Accusantium minus quod itaque iusto, placeat veniam quos soluta minima est, amet fugiat nihil numquam impedit?</p>
+     <ul>
+        <li>목록1</li>
+        <li>목록2</li>
+        <li>목록3</li>
+     </ul>
+     <header>로고.내비게이션,sns</header> 
+     <nav>내비게이션</nav>
+     <div>그룹핑박스-가장많이 사용하는 태그,모든 요소를 그룹핑</div>
+     <main>본문 내용 그룹핑,1page에서 1번만 사용</main>
+     <section><h3>섹션을 그룹핑, 하나 이상의 제목이 있어야함 꼭!!h3으로제목한 예</h3></section>
+     <article><h3>독립된 내용 그룹핑, 하나 이상의 제목이 있어야함 꼭!! h3으로제목한 예</h3></article>
+     <aside>사이드 내용 그룹핑</aside>
+     <footer>꼬릿말 그룹핑,주소,하단로고,하단메뉴,저작권,탑버튼/위로올라가는,패밀리사이트,sns</footer>
 
-</body>
+    
+
+
+
+    <h2>인라인 요소</h2>
+    <!-- 
+        인라인요소
+        1. 줄바꿈x(왼쪽에서 오른쪽 가로 배치)
+        2. 가로/세로 크기는 콘텐츠 크기
+        3. span, img, a, strong, b, em, i, small, sub, sup, ins, del, br, mark, input, label, textarea, ... -->
+
+        <span>span</span>
+        <img src="/assets/coca.png" alt="coca">
+        <a href="#">링크</a>
+        <strong>제일중요한글씨1 굵게 </strong>
+        <em>중요한 내용2 기울림</em>
+        <mark>중요한 내용 3 노랑색 형광펜</mark>
+        <small>작은 글자</small>
+        아래<sub>첨자</sub>
+        윗<sup>첨자</sup>
+        <del>취소선, 중간에선</del>
+        <ins>삽입, 디자인적인 밑줄</ins>
+
+
+
+
+ 
+
+
+    </body>
 </html>

@@ -1,22 +1,193 @@
 <!-- https://codepen.io/fsweb29/pen/QWzXrGX?editors=1000 -->
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML+CSS</title>
+    <title>HTML</title>
     <style>
+        /* !important; 가장중요하니 우선적으로 보여라! 가급적사용x */
+        /* 선택자 우선순위
+        !important(선택자가 아니고 값) > id> class> tag > *
+        
+        */
+        /* ↓설명:body_img  body뛰고img쓰면 바디안에이미지모두에게 명령 */
+        /* ↓설명:아래 body_* 보다 더 우선순위로 명령되어진다 */
+
+        body img {
+            width: auto !important;
+            height: 100px;
+        }
+
+        /* 
+         css 형식::
+         선택자 {
+            속성:값;
+            속성:값 값2 값3;
+        }
+        */
+
+        /* ↓이렇게 쓰면 html 과 body제외 */
+        /* 바디뒤에 한칸뛴거--상위요소 하위요소 */
+        /* 상위요소-부모-바디 */
+        /* 하위요소-자손-뒤에뛰어쓰기 */
+        /* ↑ body 안에 모든 요소만 적용! */
+
+        /* 개별적으로써야됨. *이걸쓰면 웹브라우저의 속도가 느려진다 */
+       
+        /* 
+        body {margin:0;}
+        h1 {margin-top:0; margin-bottom: 0;}
+        h2 {margin-top:0; margin-bottom: 0;}
+        h3 {margin-top:0; margin-bottom: 0;}
+        p {margin-top:0; margin-bottom: 0;}
+        ul {margin-top:0; margin-bottom: 0; padding-left: 0;}이렇게 쓰는이유_초기화시키는 _작업하기 편하게_개별적으로 */
+        
+
+        * {margin:0; padding:0;}
+        /* 초기화 */
+        /* 선택자 {속성:값1 값2 값3;} */
+        /* margin-top:0; auto; 1번은 상하 2번은 좌우 */
+
+        body {margin:0;}
+        h1 {margin-top:0; margin-bottom: 0;}
+        h2 {margin-top:0; margin-bottom: 0;}
+        h3 {margin-top:0; margin-bottom: 0;}
+        p {margin-top:0; margin-bottom: 0;}
+        ul {margin-top:0; margin-bottom: 0; padding-left: 0;}
+        /* 이외에 다른건 기본여백이 없다!! */
+        
+
+        
 
 
+
+        body * {
+
+            /* 패딩값 50하면 상하좌우 50씩 늘어나서 width가 400 height 300이되는 보더값까지
+            총 402가 되는것이다 (마진값은 영향이 없다)
+
+            ↑ 이렇게 박스사이즈가 영향받는게 싫으면 box-sizing:border-box; 
+            이걸 적으면 영향을 받지 않는다!!
+
+             */
+             /* box-sizing: content-box-안썼을때 기본값 */
+             /* content-box: padding과border가 박스의 안쪽으로지정 */
+             /* p있는내용을 예로) 글씨부분이 600인거고 그옆은 padding임 */
+
+             /* 선생님설명
+             content-box: padding은 width height에 포함X boder는박스안쪽지정
+              box-sizing: border-box:이면 padding은 width height에 포함된다
+              boder은 박스 바깥쪽으로 지정된다
+             */
+            box-sizing: border-box;
+            width: 500px;
+            height: 200px;
+            /* margin: 50px; */
+            /* padding: 20px; */
+            /* border: 10px solid blue; */
+            background-color: red;
+
+        }
+
+
+
+
+
+        /* 
+            박스모델 ↑ 기본 속성(필수)
+            1. width: 너비
+            2. height: 높이
+            3. border: 테두리
+            4. margin: 여백(바깥 여백)
+            5. padding: 패딩(안쪽 여백)    
+        */
     </style>
 </head>
+
 <body>
-    <h1>박스 모델</h1>
-    <div class="container">
-        <div class="div1">박스1: 가로/세로 크기 모두 auto, 가로는 100%, 세로는 콘텐츠 크기</div>
-        <div class="div2">박스2: 가로는 50%, 세로는 지정하지 않음, 여백 30px</div>
-        <div class="div3">박스3: 가로/세로 250px</div>
-    </div>
+    <h1>블록과 인라인</h1>
+
+    <h2>블록 레벨 요소</h2>
+    <!-- 
+        블록레벨요소
+        1. 줄바꿈(위에서 아래로 세로 배치)
+        2. 너비(가로 크기)는 부모 크기(기준)의 100% 
+        3. 높이(세로 크기)는 콘텐츠 크기
+        4. CSS의 width, height,margin,padding,berder 모두 적용된다          (css박스모듈속성이 모두 적용된다)
+        5. h1~h6, p, hr, ul, ol, li, dl, dt, dd, div, header, footer, section, article, aside, nav, main, ...-->
+
+
+    <!-- 
+        div : 블록레벨요소를 그룹핑
+             (과거에는 밑에 기능없이 모든 그룹핑은 div로 사용했다)
+             (↓ 밑에 있는걸 그룹핑 할때 div를 사용한다)
+        ↓ 시멘틱(의미있는)태그 html 5 에서 새로나온 (div와같은기능 그룹핑기능)
+        header :머릿말 그룹핑
+        footer :꼬릿말 그룹핑
+        section :섹션(일반적 내용)을 그룹핑
+        article :독립된 내용 그룹핑
+        aside :추가내용 그룹핑 (중요성이 떨어지는 부수적인 내용)
+        nav :내비게이션(링크가 걸리는건 전부) 그룹핑
+        main :메인 내용 그룹핑
+     -->
+    <h3>블록레벨요소들</h3>
+    <p>나는 단락입니다.paragraph/ lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias cumque minus suscipit
+        rem maiores illo odio reprehenderit consequatur id qui, est ducimus nobis adipisci! Corporis voluptate
+        voluptates cumque, praesentium at sed inventore maiores maxime! </p>
+    <ul>
+        <li>목록</li>
+       
+    </ul>
+    <header>로고.내비게이션,sns</header>
+    <nav>내비게이션</nav>
+    <div>그룹핑박스-가장많이 사용하는 태그,모든 요소를 그룹핑</div>
+    <main>본문 내용 그룹핑,1page에서 1번만 사용</main>
+    <section>
+        <h3>섹션을 그룹핑, 하나 이상의 제목이 있어야함 꼭!!h3으로제목한 예</h3>
+    </section>
+    <article>
+        <h3>독립된 내용 그룹핑, 하나 이상의 제목이 있어야함 꼭!! h3으로제목한 예</h3>
+    </article>
+    <aside>사이드 내용 그룹핑</aside>
+    <footer>꼬릿말 그룹핑,주소,하단로고,하단메뉴,저작권,탑버튼/위로올라가는,패밀리사이트,sns</footer>
+
+
+
+
+
+    <h2>인라인 요소</h2>
+    <!-- 
+        인라인요소
+        1. 줄바꿈x(왼쪽에서 오른쪽 가로 배치)
+        2. 가로/세로 크기는 콘텐츠 크기 
+        3. 예외로 img.video는 적용된다.( 가로/세로 크기)
+        4. CSS로 width, height를 바꿀수없다.css가 적용되지 않는다
+        5. CSS의 padding, berder는 적용된다
+        6.CSS의 margin 은 좌우만 적용된다
+        5. span, img, a, strong, b, em, i, small, sub, sup, ins, del, br, mark, input, label, textarea, ... -->
+
+    <span>span</span>
+    <img src="/assets/coca.png" alt="coca">
+    <a href="#">링크</a>
+    <strong>제일중요한글씨1 굵게 </strong>
+    <em>중요한 내용2 기울림</em>
+    <mark>중요한 내용 3 노랑색 형광펜</mark>
+    <small>작은 글자</small>
+    아래<sub>첨자</sub>
+    윗<sup>첨자</sup>
+    <del>취소선, 중간에선</del>
+    <ins>삽입, 디자인적인 밑줄</ins>
+
+
+
+
+
+
+
 </body>
+
 </html>

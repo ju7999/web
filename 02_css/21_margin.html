@@ -7,16 +7,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        /* 
+          값이 숫자일 경우 0은 px,%... 생략가능(단위)
+          그외는 단위를 반드시 써야한다
+
+
+            여백
+            margin-top: 10px
+            margin-right: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+
+            속기형(축약형)
+            margin: 10px; -> 상하좌우 모두 10
+            margin: 10px 20px; -> 상하10, 좌우20
+            margin: 10px 20px 30px; -> 상10, 좌우20, 하30
+            margin: 10px 20px 30px 40px; -> 상10우20하30좌40
+        */
+        /* 블록레벨요소 : 위아래 margin은 큰쪽으로 지정 */
+        div {
+            width: 100px;
+            height: auto;
+            background-color: yellow;
+        }
+        
+        /* 코드최적화/중복코드는 제거한다 */
+        .div1 {
+            /* 단위: px, % */
+            /* width / height/ margin: auto;는 100%크기를의미 부모크기의 100% 여기서 부모는 body (상대적인크기)부모크기에따라 달라짐  px는 정해진 크기 */
+            /* %의 기준은 부모 */
+            width: 50%;
+           
+            /*
+            일반형
+            margin-top:50px;
+            margin-right:50px;
+            margin-bottom:50px;
+            margin-left:50px; 
+            
+            */
+            /* 속기형 */
+            margin: 50px;
+        }
+        .div2 {
+            /* 일반형 */
+            
+            margin-top:10px;
+            margin-right: 20px;
+            margin-bottom: 30px;
+            margin-left: 20px;
+
+            /* 속기형상 10 좌우20 하30 */
+            margin: 10px 20px 30px;
+        }
+        .div3 {
+           
+            margin-top:10px;
+            margin-right: 20px;
+            margin-bottom: 30px;
+            margin-left: 20px;
+
+            /* 속기형상 10 좌우20 하30 */
+            margin: 10px 20px 30px;
+        }
+       
+        span {
+            /* 인라인요소는 위아래 마진x 좌우만 가능 */
+            /* padding 은 전부적용 (인라인 블록요소) */
+            
+            margin: 50px;
+            border: 1px solid red;
+        }
 
     </style>
 </head>
 <body>
     <h1>여백</h1>
-    <div class="m1">박스1</div>
-    <div class="m2">박스2</div>
-    <div class="m3">박스3</div>
-    <div class="m4">박스4</div>
-    <div class="m5">박스5</div>
-    <div class="m6">박스6</div>
+    <div class="div1" >% div박스</div>
+    <div class="div2" >px div박스</div>
+    <div class="div3" >px div박스</div>
+    <hr>
+    <span>px span박스</span>
+    <span>px span박스</span>
+
 </body>
 </html>

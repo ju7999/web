@@ -40,3 +40,11 @@ figcation 조금더 신경써서 보기
 
  피그마
 
+
+
+
+ 유효성 검사
+ https://validator.w3.org/#validate_by_upload
+ -문제확인할수있으니 확인해보기-
+
+
