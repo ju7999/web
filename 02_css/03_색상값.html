@@ -7,16 +7,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        /* 
+          color :글자색;
+          background-color: 배경색;
+          border-color: 태두리색;
+        */
+
+
+        /* 
+          색의 속성값;
+          영문키워드:red, blue, green, yellow, ,..... (바람직한 표현 X)
+          16진수 코드: #ff0000, #0000ff, #00ff00, #ffff00
+                        R G B   (색에 가까우면 f 없으면 0    
+                        -> #ff0000   ff:R 00:G 00:B)
+
+        */
+
+
+
+        /* 
+          2진수 : 0,1
+          10진수 : 0~9
+          8진수 : 0~7
+          16진수 : 0~9, A~F(영문의 대소 구별없다)
+
+        */
+
+         /* 영문 키워드  */
+        /* https://www.w3schools.com/colors/colors_names.asp */
+        p:nth-of-type(1) {color:red;}
+        /* 16진수 #RRGGBB, #RGB */
+        p:nth-of-type(2) {background-color:#f00;}
+        p:nth-of-type(2) {color:#123456;}
+        /*  red, green, blue */
+        p:nth-of-type(3) {color:rgb(255, 0, 0);}
+        /* A는 alpha로 투명도: 0(투명)~1(불투명)_기본값 불투명 */
+        p:nth-of-type(4) {color:rgba(255, 0, 0, 0.5);}
+        /* hue(색상),saturation(채도), lightness(명도) */
+        p:nth-of-type(5) {color:hsl(0, 100%, 50%);}
+        p:nth-of-type(6) {color:hsla(0, 100%, 50%, 0.5);}
 
     </style>
 </head>
 <body>
     <h1>CSS 색상 값</h1>
-    <p class="cName">red</p>
-    <p id="cHex">#ff0000</p>
+    <p >red</p>
+    <p >#ff0000</p>
     <p>rgb(255, 0, 0)</p>
-    <p class="cRgba">rgba(255, 0, 0, 0.5)</p>
-    <p class="cHsl">hsl(0, 100%, 50%)</p>
-    <p class="cHsla">hsla(0, 100%, 50%, 0.5)</p>
+    <p >rgba(255, 0, 0, 0.5)</p>
+    <p >hsl(0, 100%, 50%)</p>
+    <p >hsla(0, 100%, 50%, 0.5)</p>
 </body>
 </html>

@@ -7,35 +7,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+      
+         /* 
+            font-size: 값;
+            값: 숫자(단위), 키워드
+            키워드: xx-small, x-small, small, smaller, medium,
+                    large, larger, x-large, xx-large
+            단위(길이: length): px, em, rem
+            단위: %
 
+            em(엠), % 단위는 조상(부모) 태그에 지정한 글꼴 크기를 기준
+            rem(램) 단위는 html 태그에 지정한 글꼴 크기를 기준
+        */
+
+        html {font-size:16px;}
+       
+        div {font-size:30px;}
+
+        body > p:nth-of-type(2) {font-size: medium;}
+
+        div p:nth-of-type(1) {font-size:16px;}
+        /* 부모크기의 배수  */
+        div p:nth-of-type(2) {font-size:1em;}
+        /* html 에만 반응 - 태그에 지정한 크기의 배수 */
+        div p:nth-of-type(3) {font-size:3rem;}
+        div p:nth-of-type(4) {font-size:100%;}
+       
+       
     </style>
 </head>
 <body>
     <h1>글꼴 크기</h1>
+    <p>기본:16px (크롬 브라우저)</p>
+    <p>키워드</p>
     <div>
-        <p class="fz16px">글자의 크기 비교: 16px</p>
-        <p class="fz1em">글자의 크기 비교: 1em</p>
-        <p class="fz1rem">글자의 크기 비교: 1rem</p>
-        <p class="fzmedium">글자의 크기 비교: medium</p>
-        <p class="fz100p">글자의 크기 비교: 100%</p>
+        <p>30px</p>
+        <p>숫자em</p>
+        <p>숫자rem</p>
+        <p>숫자%</p>
+        
+       
     </div>
-
-    <!-- 아래 내용은 참고로 해봄. -->
-    <p class="fzxx-small">글자의 크기 비교: xx-small</p>
-    <p class="fz10px">글자의 크기 비교: 10px</p>
-    <p class="fzx-small">글자의 크기 비교: x-small</p>
-    <p class="fz10px">글자의 크기 비교: 10px</p>
-    <p class="fzsmall">글자의 크기 비교: small</p>
-    <p class="fz13px">글자의 크기 비교: 13px</p>
-    <p class="fzsmaller">글자의 크기 비교: smaller</p>
-    <p class="fz13dot3333px">글자의 크기 비교: 13.3333px</p>
-    <p class="fzlarge">글자의 크기 비교: large</p>
-    <p class="fz18px">글자의 크기 비교: 18px</p>
-    <p class="fzlarger">글자의 크기 비교: larger</p>
-    <p class="fz19dot2px">글자의 크기 비교: 19.2px</p>
-    <p class="fzx-large">글자의 크기 비교: x-large</p>
-    <p class="fz24px">글자의 크기 비교: 24px</p>
-    <p class="fzxx-large">글자의 크기 비교: xx-large</p>
-    <p class="fz32px">글자의 크기 비교: 32px</p>
+   
 </body>
 </html>
