@@ -6,12 +6,46 @@
   , initial-scale=1.0">
   <title>Document</title>
   <style>
-    h1 {background-color:red; color:blue;}
-    p {background-color:rgba 255,0,0,1; color:blue;}
+   div {
+    width:300px;
+    height:100px;
+    margin:20px;
+   }
+
+   div:nth-of-type(1){
+    background-image:linear-gradient(rgba(255,0,0,1),rgba(255,255,255));
+  }
+  div:nth-of-type(2){
+    background-image:linear-gradient(to right, red, yellow);
+  }
+  div:nth-of-type(3){
+    background-image:linear-gradient(to top,red, yellow);
+  }
+  div:nth-of-type(4){
+    background-image:linear-gradient(45deg, red, yellow);
+  }
+  div:nth-of-type(5){
+    background-image:linear-gradient(10deg, red, yellow);
+  }
+  div:nth-of-type(6){
+    background-image:linear-gradient(to left, red, yellow);
+  }
+  div:nth-of-type(7){
+    background-image:linear-gradient(to left, red, yellow);
+  }
+  div:nth-of-type(8){
+    background-image:linear-gradient(to left, red, yellow);
+  }
   </style>
 </head>
 <body>
-  <h1>제목</h1>
-  <p>이것은 문단이다</p>
+  <div>박스</div>
+  <div>박스</div>
+  <div>박스</div>
+  <div>박스4</div>
+  <div>박스5</div>
+  <div>박스</div>
+  <div>박스</div>
+  <div>박스</div>
 </body>
 </html>
