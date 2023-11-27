@@ -8,13 +8,27 @@
     <title>HTML+CSS</title>
     <style>
 
+            /* 
+            text-indent: 단락의 첫 줄 들여쓰기;
+                값: 숫자px, 숫자%, (음수)
+                %의 기준은 width
+        */
+
+    .ti1 {text-indent: 50px;}
+    .ti2 {text-indent: 50%;}
+    /* 숨기려는 용도로 음수 큰숫자로 */
+    .ti3 {text-indent: -9999em;}
+
+
+
 
     </style>
 </head>
 <body>
-    <h1>텍스트 들여쓰기, 줄 간격, 변환</h1>
-    <h2>들여쓰기</h2>
+    <h1>단락의 첫 줄 들여쓰기</h1>
+    
     <p class="ti1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta voluptates commodi aliquid maiores quia pariatur! Minima, quae explicabo. Quaerat consectetur neque, quas vel incidunt eveniet tenetur eum nostrum distinctio quos!</p>
     <p class="ti2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta voluptates commodi aliquid maiores quia pariatur! Minima, quae explicabo. Quaerat consectetur neque, quas vel incidunt eveniet tenetur eum nostrum distinctio quos!</p>
+    <p class="ti3"><span>숨긴다</span></p>
 </body>
 </html>

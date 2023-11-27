@@ -9,14 +9,67 @@
     <title>HTML+CSS</title>
     <style>
 
+        /* 
+           글자(text, font) 관련 속성
+           font-family: 글꼴;
+           font-size :크기;
+           font-weight: 굵기;
+           font-style: 기울임;
+           line-height: 줄간격;
+
+           (속기)
+           font: 굵기 또는 기울임 크기/줄간격 글꼴;
+            font: (선택적: 순서상관없음 굵기 또는 기울임) 
+                  (정해진 위치에 써야한다: 크기/줄간격 글꼴;
+
+
+           color
+
+        */
+
+        /* 
+           글자의 가독성이 높아야한다. (출판편집-쉐리프 많이 사용)
+           좀더 익숙한 sans-serif를 웹에서 많이사용한다 
+
+
+           글꼴이름이 두 단어 이상일 경우 ''로 묶는다.안쓰면 오류난다
+          serif(쉐리프): 바탕, 'times New Roman' (돌기가 있는 폰트 튀어나온)
+          sans-serif : 굴림,돋음, 'segoe UI', Verdana
+
+          font-family:값1, 값2, 값....일반적으로 2~4개쓴다
+        */
+
+        .f1 {
+            /* line-height:1.5  -->글자 크기의 1.5배  -->30px */
+            font-family:'Times New Roman', Times, serif;
+            font-size: 20px;
+            font-weight: bold;
+            font-style: italic;
+            line-height:1.5
+        }
+       
+        .f2 {
+            /* []선택사항 순서 바뀌어도됨 */
+      /*  font: [굵기|기울림] 크기/줄간격 글꼴; 순서가 정해졌다 바꾸면 안된다!! */
+            font: bold italic 20px/1.5 'Times New Roman', Times, serif;
+        }
         
+        
+        .f3 {
+            /* font: 크기 글꼴;  */
+            /* font 속기 속성은  반드시 써야한다 크기,글꼴 */
+            font: bold italic 20px 'Times New Roman', Times, serif;
+        }
+
     </style>
 </head>
 
 <body>
     <h1>글꼴 속기 속성</h1>
+    <p>font-family, font-size, font-style, font-weight 속성 등이 있다.</p>
     <p class="f1">font-family, font-size, font-style, font-weight 속성 등이 있다.</p>
     <p class="f2">font-family, font-size, font-style, font-weight 속성 등이 있다.</p>
+    <p class="f3">font-family, font-size 속성 등이 있다.</p>
 </body>
 
 </html>

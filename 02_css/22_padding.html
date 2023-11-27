@@ -7,15 +7,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        /* 
+          0은 단위 생략 가능
+
+
+            패딩 (박스의 안쪽 여백)
+            padding-top: 10px
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+
+            속기형(축약형)
+            padding: 10px; -> 상하좌우 모두 10
+            padding: 10px 20px; -> 상하10, 좌우20
+            padding: 10px 20px 30px; -> 상10, 좌우20, 하30
+            padding: 10px 20px 30px 40px; -> 상10우20하30좌40
+
+            margin은 음수 적용 0
+            padding은 음수 적용 X
+        */
+
+
+        /* text-align: justify; 양쪽에 맞춰 정렬 */
+        /* padding 단위는 8단위로 많이줌 */
+
+        body {margin:0;}
+        p {
+            background-color: yellow;
+            text-align: justify;
+            width:500px;
+            margin-left:-100px;
+            padding:8px 16px 24px 32px; 
+            line-height: 1;
+            
+        }
+      
+     
 
     </style>
 </head>
 <body>
     <h1>패딩</h1>
-    <div class="p1">박스1</div>
-    <div class="p2">박스2</div>
-    <div class="p3">박스3</div>
-    <div class="p4">박스4</div>
-    <div class="p5">박스5</div>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates dolor quae esse, delectus eveniet voluptatem quaerat reiciendis nisi perspiciatis quidem distinctio enim ab error, blanditiis deleniti tempora nobis ea iusto!</p>
+
+
 </body>
 </html>

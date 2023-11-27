@@ -8,18 +8,60 @@
     <title>HTML+CSS</title>
     <style>
 
-        
+                /* 
+
+                css1 , css2, css3.x
+            text-decoration-color: 색;
+                기본 값은 글자색
+            text-decoration-thinkness: 두께;
+                값: px, %
+            text-decoration-line: 위치;
+                값: none(없음), underline(밑줄), overline(윗줄), line-through(취소선)
+            text-decoration-style: 종류;
+                값: solid(실선), dotted(점선), dashed(대시선), double(이중실선), wavy(웨이브)
+
+            (속기형)
+            text-decoration: line thickness style color;
+        --> text-decoration: 위치 두께 종류 색;  (순서없어도 됨!!)
+            text-underline-offset: 숫자px;로 간격 조정한다 (음수가능)
+            테두리는 패딩으로 간격 조정을 한다.
+            underline 밑줄에서만 해당 기능이 작동한다
+        */
+
+        /*★ 밑줄넣기 */
+        p:nth-of-type(1) {text-decoration: none;}
+        p:nth-of-type(2) {
+            text-decoration-line: overline;
+            text-decoration-style: dotted;
+            text-decoration-color: red;
+            text-decoration-thickness: 3px;
+           
+        }
+        p:nth-of-type(3) {
+            text-decoration: line-through wavy red 3px;
+            
+        }
+        p:nth-of-type(4) {
+            text-decoration: underline;
+            text-decoration-style: solid;
+            text-underline-offset: 8px;
+        }
+
+        span {border-bottom: 3px solid red;
+            padding-bottom: 5px;      
+        }
+        /*★ 밑줄제거 */
+        a {text-decoration: none;}
     </style>
 </head>
 <body>
     <h1>텍스트 장식(꾸밈)</h1>
-    <p class="tdn">text-decoration: none;</p>
-    <a href="#" class="tdn">text-decoration: none;</a>
-    <p class="tdu">text-decoration: underline;</p>
-    <a href="#" class="tdu">text-decoration: underline;</a>
-    <p class="tdo">text-decoration: underline;</p>
-    <a href="#" class="tdo">text-decoration: overline;</a>
-    <p class="tdl">text-decoration: underline;</p>
-    <a href="#" class="tdl">text-decoration: line-through;</a>
+    <p>없음</p>
+    <p>윗줄</p>
+    <p>취소선</p>
+    <p>밑줄</p>
+    <p><span>테두리</span></p>
+    <a href="#">밑줄</a>
+   
 </body>
 </html>
