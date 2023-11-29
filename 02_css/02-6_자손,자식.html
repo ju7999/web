@@ -22,7 +22,7 @@
              형제: 형~제  (~:틸더 /물결표시)
             */
 
-            .main1 .sub {border: 1px solid red;}
+            .main1 div {border: 1px solid red;}
             .main2>li {border: 1px solid red;}
             
 
@@ -39,18 +39,22 @@
                     <li>서브2</li>
                 </ul>
             </li>
-            <li>메뉴2</li>
-            <li>메뉴3</li>
+            <div>
+                <li>메뉴2</li>
+                <li>메뉴3</li>
+            </div>
         </ul>
 
         <h2>자식 선택자: &gt; (html 7번 기호참고!)  </h2>
         <ul class="main2">
-            <li>메뉴1
-                <ul class="sub">
-                    <li>서브1</li>
-                    <li>서브2</li>
-                </ul>
-            </li>
+            
+                <li>메뉴1
+                    <ul class="sub">
+                        <li>서브1</li>
+                        <li>서브2</li>
+                    </ul>
+                </li>
+            
             <li>메뉴2</li>
             <li>메뉴3</li>
         </ul>
