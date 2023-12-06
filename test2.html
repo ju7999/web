@@ -5,15 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    img {
-      float: left;
-      margin-right:20px;
+    div {
+      width:100px;
+      height:100px;
+      background-color: yellow;
+      animation-name: rotate;
+      animation-duration: 0.5s;
+      
+    }
+
+    div:nth-of-type(1) {animation-iteration-count: 3;}
+    div:nth-of-type(2) {animation-iteration-count:infinite;}
+
+    @keyframes rotate {
+      0% {transform: : rotate(0deg);}
+      100% {transform: :rotate(360deg);}
     }
   </style>
 </head>
 <body>
-  <h1>float 속성을 이용한 위치 설정</h1>
-  <p><img src="/assets/coca.png" alt="콜라"  width="245" height="185">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare sapien suscipit tincidunt ullamcorper. Cras ac sem sed mauris maximus rhoncus vel in metus. Nam pharetra arcu sit amet dolor interdum, eget scelerisque libero finibus. Phasellus quis vulputate ante. Fusce sit amet viverra justo. Donec id elementum mauris. Nam id porttitor nisl, et suscipit nunc. Vestibulum sit amet volutpat quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis placerat sem eu facilisis ultricies. Nulla et elit placerat, malesuada massa sit amet, dictum quam. Duis eu turpis non sapien molestie luctus nec a tortor. Nunc non est eget elit suscipit interdum. Maecenas iaculis lobortis lorem et dignissim. Nullam dapibus, arcu vel malesuada egestas, nisi mi accumsan tellus, at rhoncus dolor nisi in tortor. Donec at aliquam lectus, ac egestas odio. Proin convallis sapien id consectetur egestas. Sed at varius libero, ut ultricies eros. Suspendisse potenti. Vivamus non posuere mauris. Maecenas luctus elementum justo, non tempor nisl blandit id. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+
+  <div></div>
+  <div></div>
   
 </body>
 </html>
